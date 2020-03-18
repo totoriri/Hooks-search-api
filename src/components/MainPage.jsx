@@ -37,7 +37,7 @@ const MainPage = () => {
   };
 
   return (
-    <section　id="App">
+    <section　id="MainPage">
       <form onSubmit={onSubmitHandler}>
           <input
             type="search"
