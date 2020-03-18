@@ -4,7 +4,7 @@ import axios from "axios";
 
 // import "./styles.css";
 
-const App = () => {
+const MainPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [books, setBooks] = useState({ items: [] });
   const onInputChange = e => {
@@ -37,10 +37,8 @@ const App = () => {
   };
 
   return (
-    <section>
+    <section　id="App">
       <form onSubmit={onSubmitHandler}>
-        <label>
-          <span>Search for books</span>
           <input
             type="search"
             placeholder="microservice, restful design, etc.,"
@@ -48,7 +46,6 @@ const App = () => {
             onChange={onInputChange}
           />
           <button type="submit">Search</button>
-        </label>
       </form>
       <ul>
         {books.items.map((book, index) => {
@@ -76,4 +73,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default MainPage;
