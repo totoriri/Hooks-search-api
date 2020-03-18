@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
 
-// import "./styles.css";
+import "./MainPage.scss";
 
 const MainPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
