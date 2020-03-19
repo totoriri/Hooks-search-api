@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import MainPage from './components/MainPage';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
+import './reset.css';
+import './index.css';
 
 ReactDOM.render(
     <BrowserRouter>
