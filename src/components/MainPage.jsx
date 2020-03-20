@@ -14,7 +14,7 @@ const MainPage = () => {
   let API_URL = `https://www.googleapis.com/books/v1/volumes`;
 
   const fetchBooks = async () => {
-    const result = await axios.get(`${API_URL}?q=${searchTerm}`);
+    const result = await axios.get(`${API_URL}?q=${searchTerm}+picture book&maxResults=30`);
     setBooks(result.data);
     console.log(result.data)
   };
@@ -25,14 +25,14 @@ const MainPage = () => {
   };
 
   const bookAuthors = authors => {
-    if (authors.length <= 2) {
-      authors = authors.join(" and ");
-    } else if (authors.length > 2) {
-      let lastAuthor = " and " + authors.slice(-1);
-      authors.pop();
-      authors = authors.join(", ");
-      authors += lastAuthor;
-    }
+    // if (authors.length <= 2) {
+    //   authors = authors.join(" and ");
+    // } else if (authors.length > 2) {
+    //   let lastAuthor = " and " + authors.slice(-1);
+    //   authors.pop();
+    //   authors = authors.join(", ");
+    //   authors += lastAuthor;
+    // }
     return authors;
   };
 
