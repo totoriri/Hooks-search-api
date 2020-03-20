@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MainPage from './components/MainPage';
+import EntryPage from './components/EntryPage';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
@@ -10,7 +11,8 @@ import './index.css';
 ReactDOM.render(
     <BrowserRouter>
         <Switch>
-            <Route exact path='/' component={MainPage} />
+            <Route exact path='/' component={EntryPage}/>
+            <Route  path='/MainPage' component={MainPage} />
         </Switch>
     </BrowserRouter>
     , document.getElementById('root'));
