@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import axios from "axios";
 
 import "./MainPage.scss";
+import ModalWithTransitions from './Modal'
+
 
 const MainPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [books, setBooks] = useState({ items: [] });
+  const [show, setShow] = useState(false)
   const onInputChange = e => {
     setSearchTerm(e.target.value);
   };
@@ -63,6 +66,19 @@ const MainPage = () => {
                     <h3>{book.volumeInfo.title}</h3>
                     <p>{bookAuthors(book.volumeInfo.authors)}</p>
                     <p>{book.volumeInfo.publishedDate}</p>
+                    <ModalWithTransitions
+                      activator={({ setShow }) => (
+                        <button
+                          className="modal-open-btn"
+                          type="button"
+                          onClick={() => setShow(true)}
+                        >
+                          READ MORE
+                        </button>
+                      )}
+                    >
+                      Transitions, oh baby!
+                    </ModalWithTransitions>
                   </div>
                 </div>
               </li>
