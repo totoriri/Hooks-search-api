@@ -65,7 +65,6 @@ const MainPage = () => {
                   <div>
                     <h3>{book.volumeInfo.title}</h3>
                     <p>{bookAuthors(book.volumeInfo.authors)}</p>
-                    <p>{book.volumeInfo.publishedDate}</p>
                     <ModalWithTransitions
                       activator={({ setShow }) => (
                         <button
@@ -77,7 +76,19 @@ const MainPage = () => {
                         </button>
                       )}
                     >
-                      Transitions, oh baby!
+                    <img
+                    alt={`${book.volumeInfo.title} book`}
+                    src={`http://books.google.com/books/content?id=${
+                      book.id
+                    }&printsec=frontcover&img=1&zoom=1&source=gbs_api`}
+                      />
+                    <h3>{book.volumeInfo.title}</h3>
+                    <p>{bookAuthors(book.volumeInfo.authors)}</p>
+                      <p>{book.volumeInfo.publishedDate}</p>
+                    <div>
+                      ((SUMMURY))
+                      <p>{book.volumeInfo.description}</p>
+                    </div>
                     </ModalWithTransitions>
                   </div>
                 </div>
