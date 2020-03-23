@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
+// import { Link } from 'react-router-dom'
+// import PersonIcon from '@material-ui/icons/Person';
 
 import "./MainPage.scss";
 import ModalWithTransitions from './Modal'
@@ -40,7 +42,7 @@ const MainPage = () => {
   };
 
   return (
-    <section　id="MainPage">
+    <section id="MainPage">
       <form onSubmit={onSubmitHandler}>
           <input
             type="search"
