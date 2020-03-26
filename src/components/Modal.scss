@@ -24,20 +24,27 @@
   
   .modal-close-btn {
     position: absolute;
-    top: -1.5rem;
-    right: 0;
-    padding: 5px;
+    top:5px;
+    right:4px;
+    font-size:20px;
     border: 0;
     -webkit-appearance: none;
     background: none;
-    color: white;
+    color: black;
     cursor: pointer;
   }
   
   .modal-body {
+    width:300px;
     padding: 1.25rem 1.5rem;
     border-radius: 4px;
     background-color: white;
+    width:530px;
+    text-align:center;
+    transform:translateX(-125px);
+    .modal-summury{
+    margin-top:20px;
+    }
   }
   
   .modal-open-btn {

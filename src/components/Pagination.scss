@@ -1,0 +1,17 @@
+ul{
+    display:flex;
+    // justify-content:
+    li{
+        list-style:none;
+        font-size:20px;
+        &:hover{
+            cursor: pointer;
+        }
+        a{
+            color:black;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
