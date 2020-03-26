@@ -26,7 +26,7 @@ const MainPage = () => {
     const fetchDefaultBooks = async () => {
       setLoading(true);
       const response = await axios.get(
-        `https://www.googleapis.com/books/v1/volumes?q=picture book+love+book&maxResults=30`
+        `https://www.googleapis.com/books/v1/volumes?q=picture book+love+book&maxResults=36`
       );
       setBooks(response.data);
       setLoading(false);
@@ -37,7 +37,7 @@ const MainPage = () => {
   }, []);
 
   const fetchBooks = async () => {
-    const result = await axios.get(`${API_URL}?q=love+${searchTerm}+picture book&maxResults=30`);
+    const result = await axios.get(`${API_URL}?q=love+${searchTerm}+picture book&maxResults=36`);
     setBooks(result.data);
     console.log(result.data)
   };
@@ -65,6 +65,7 @@ const MainPage = () => {
 
   function pagiNate(number) {
     setCurrentPage(number);
+    console.log(number)
   }
 
   return (
@@ -91,6 +92,7 @@ const MainPage = () => {
         </form>
       </div>
       <div className="search_result_container">
+        <div className="book_results">
         {(loading) ? <h1>Loading...</h1>
           :
           <ul>
@@ -138,14 +140,15 @@ const MainPage = () => {
             );
           })}
         </ul>
-        }
+          }
       </div>
       {/* <Posts posts={currentPosts} loading={loading} /> */}
       <Pagination
         pagiNate={number => pagiNate(number)}
         postPerPage={postPerPage}
         totalPosts={books.items.length}
-      />
+        />
+      </div>
     </section>
   );
 };

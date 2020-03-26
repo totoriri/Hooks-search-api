@@ -49,28 +49,30 @@
   .search_result_container{
     position:absolute;
     top:480px;
-    ul{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:space-around;
-      li{
-        width:480px;
-        list-style: none;
-        .book_item{
-          display:flex;
-          background: linear-gradient(rgba(211, 91, 111, 0.376), rgba(0, 0, 0, 0));
-          border-radius: 30px;
-          margin: 56px;
-          padding: 32px;
-          img{
-            margin-right: 32px;
-            border-radius: 16px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
-            transition: all .2s;
-            transform: translate(0, -64px);
-            &:hover{
-              box-shadow: 0 6px 8px rgba(0, 0, 0, .4);
-              transform: translate(0, -64px) scale(1.1);
+    .book_results{
+      ul{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-around;
+        li{
+          width:480px;
+          list-style: none;
+          .book_item{
+            display:flex;
+            background: linear-gradient(rgba(211, 91, 111, 0.376), rgba(0, 0, 0, 0));
+            border-radius: 30px;
+            margin: 56px;
+            padding: 32px;
+            img{
+              margin-right: 32px;
+              border-radius: 16px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+              transition: all .2s;
+              transform: translate(0, -64px);
+              &:hover{
+                box-shadow: 0 6px 8px rgba(0, 0, 0, .4);
+                transform: translate(0, -64px) scale(1.1);
+              }
             }
           }
         }
