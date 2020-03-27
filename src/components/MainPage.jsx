@@ -7,6 +7,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import "./MainPage.scss";
 import ModalWithTransitions from './Modal'
 import Pagination from "./Pagination"
+import GsapAnimation from "./GsapAnimation"
 
 const MainPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -79,7 +80,7 @@ const MainPage = () => {
         </nav>
       <div className="top-area">
         <div className="category-title-animation">
-          <h1>love</h1>
+          <GsapAnimation/>
         </div>
       <form onSubmit={onSubmitHandler}>
           <input

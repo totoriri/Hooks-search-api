@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Knewave');
+
+body {
+    margin: 0;
+    background-color: #0D22F7;
+    font-family: 'Knewave', cursive;
+    color: #fff;
+  }
+  
+  .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    width: 100%;
+    height: 100vh;
+    
+    #tryAnimation {
+      position: absolute;
+      right:20px;
+      bottom: 20px;
+      border-radius: 15px;
+      border: 4px solid #F0EB12;
+      padding: 20px;
+    }
+    
+    span {
+      font-size: 10em;
+      color: #F8F20A;
+      padding: 10px;
+      margin-bottom: -100px;
+    }
+} 
